@@ -11,19 +11,22 @@ public class Pemilihan2Percobaan01 {
         System.out.print("Masukkan Tahun : ");
         tahun = input01.nextInt();
 
-        // Mengecek apakah tahun kabisat
-        if ((tahun % 4) == 0) {
-            if ((tahun % 100) == 0) {
-                // Tahun yang habis dibagi 100 harus juga habis dibagi 400 untuk menjadi kabisat
-                if ((tahun % 400) == 0) {
+        // Mengecek apakah tahun kabisat tanpa menggunakan operator logika
+        if (tahun % 4 == 0) {
+            if (tahun % 100 == 0) {
+                if (tahun % 400 == 0) {
+                    // Tahun habis dibagi 100 dan 400, maka tahun kabisat
                     System.out.println("Tahun Kabisat");
                 } else {
+                    // Tahun habis dibagi 100 tapi tidak habis dibagi 400, maka bukan kabisat
                     System.out.println("Bukan Tahun Kabisat");
                 }
             } else {
+                // Tahun habis dibagi 4 tetapi tidak habis dibagi 100, maka kabisat
                 System.out.println("Tahun Kabisat");
             }
         } else {
+            // Tahun tidak habis dibagi 4, maka bukan kabisat
             System.out.println("Bukan Tahun Kabisat");
         }
 
